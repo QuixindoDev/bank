@@ -19,11 +19,21 @@ public class Account
     void openAccount(String type){
         this.type = type;
         this.status = true;
-        System.out.println("Conta "+type+" Criada Com Sucesso");
+
+        if (this.type == "Saving") this.balance += 150.00;
+        else this.balance += 50.00;
+
+        System.out.println("Welcome Sr. "+this.owner);
+        System.out.println(type+" account built successful");
     }
 
     void closeAccount(){
-        this.status = false;
+        if (this.balance > 0){
+            this.get(this.balance);
+            this.status = false;
+        }
+        else System.out.println("You can not do this operation!!");
+
         System.out.println("Building");
     }
 
