@@ -7,7 +7,6 @@ public class Account
     private double balance;
     protected char type;
     private boolean status;
-    protected double initBalance;
 
     Account(){
         this.setStatus(false);
