@@ -13,7 +13,8 @@ public class Account
         this.setBalance(0);
     }
 
-    public void openAccount(char type){
+    public void openAccount(char type, String name){
+        setOwner(name);
         setType(type);
         setStatus(true);
 
